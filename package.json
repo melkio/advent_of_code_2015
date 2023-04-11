@@ -1,0 +1,19 @@
+{
+  "name": "advent-of-code-2015",
+  "version": "1.0.0",
+  "description": "Advent of code 2015 puzzle solutions",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist/ && rm -rf node_modules && npm i"
+  },
+  "keywords": [
+    "advent-of-code",
+    "puzzle",
+    "typescript"
+  ],
+  "author": "melkio",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.3"
+  }
+}
