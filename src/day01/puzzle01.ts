@@ -1,3 +1,5 @@
+import * as input from "./input.json"
+
 function parse(value: string) : BracketsRule {
     switch (value) {
         case "(" : return new OpenBracketsRule();
@@ -28,9 +30,10 @@ class DoNothingBracketsRule implements BracketsRule {
     }
 }
 
-export function run(value: string) : number {
-    return [...value]
-        .map((value: string) => parse(value))
-        .reduce((previousValue: number, currentValue: BracketsRule) => currentValue.apply(previousValue), 0);
-}
+const result = [...input.value]
+    .map((value: string) => parse(value))
+    .reduce((previousValue: number, currentValue: BracketsRule) => currentValue.apply(previousValue), 0)
+
+console.log("DAY01 / PUZZLE 01: ", result)
+
 

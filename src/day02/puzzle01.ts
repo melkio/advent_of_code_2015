@@ -43,5 +43,5 @@ class Box {
 const result = input.values
     .map((value: string) => Box.parse(value))
     .reduce((previousValue: number, currentValue: Box) => previousValue + currentValue.area, 0)
-console.log(result)
+    console.log("DAY02 / PUZZLE 01: ", result)
 
